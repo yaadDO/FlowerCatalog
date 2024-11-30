@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercatalog/pages/tulip.dart';
 import 'package:fluttercatalog/services/buttonstyle.dart';
 import 'package:fluttercatalog/services/textStyle.dart';
 import 'package:fluttercatalog/navbar.dart';
@@ -10,10 +9,10 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: navbar(),
+      drawer: const navbar(),
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.secondary,
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.white),
         title: const Text('Catalog',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         centerTitle: true,
@@ -99,7 +98,7 @@ class Home extends StatelessWidget {
                 image: AssetImage('assets/Lily.jpg'),
                 fit: BoxFit.fill,
               ),
-              borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+              borderRadius:  BorderRadius.all(Radius.circular(8.0)),
             ),
             height: 150,
             margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),

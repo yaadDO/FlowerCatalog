@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttercatalog/pages/settings.dart';
 
 class navbar extends StatelessWidget {
   const navbar({super.key});
@@ -11,13 +10,13 @@ class navbar extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          DrawerHeader(
+          const DrawerHeader(
             decoration: BoxDecoration(
               image: DecorationImage(image: AssetImage('assets/background.jpg'), fit: BoxFit.cover),
             ),
 
               child: Text(
-                'Flower' + '\n' + 'Guide',
+                'Flower\nGuide',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -28,15 +27,15 @@ class navbar extends StatelessWidget {
 
           ),
           ListTile(
-            leading: Icon(Icons.settings,color: Colors.white,),
-            title: Text('Settings', style: TextStyle(color: Colors.white),),
+            leading: const Icon(Icons.settings,color: Colors.white,),
+            title: const Text('Settings', style: TextStyle(color: Colors.white),),
             onTap: () async {
               dynamic result = await Navigator.pushNamed(context, '/settings');
             },
           ),
           ListTile(
-            leading: Icon(Icons.info_outline, color: Colors.white,),
-            title: Text('About', style: TextStyle(color: Colors.white),),
+            leading: const Icon(Icons.info_outline, color: Colors.white,),
+            title: const Text('About', style: TextStyle(color: Colors.white),),
             onTap: () {
               info(context);
             },
@@ -50,9 +49,9 @@ class navbar extends StatelessWidget {
     context: context,
     builder: (context) => AlertDialog(
       backgroundColor: Theme.of(context).colorScheme.secondary,
-      title: Text('Info:', style: TextStyle(color: Colors.white,fontSize: 40)),
-      content: Text(
-          'Published by : once software' + '\n' + 'Release Date: TBD' + '\n' + 'Version: Beta',
+      title: const Text('Info:', style: TextStyle(color: Colors.white,fontSize: 40)),
+      content: const Text(
+          'Published by : once software\nRelease Date: TBD\nVersion: Beta',
           style: TextStyle(color: Colors.white, fontSize: 15),
       ),
     ),
