@@ -23,6 +23,30 @@ class Home extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
+                image: AssetImage('assets/rose.jpg'),
+                fit: BoxFit.fill,
+              ),
+              borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+            ),
+            height: 150,
+            margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                const textStyle(text: 'ROSE'),
+                buttonstyle(
+                  onPressed: () async {
+                    dynamic result =
+                    await Navigator.pushNamed(context, '/rose');
+                  },
+                ),
+              ],
+            ),
+          ),
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
                 image: AssetImage('assets/tulip.jpg'),
                 fit: BoxFit.fill,
               ),
@@ -111,30 +135,6 @@ class Home extends StatelessWidget {
                   onPressed: () async {
                     dynamic result =
                     await Navigator.pushNamed(context, '/lily');
-                  },
-                ),
-              ],
-            ),
-          ),
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/rose.jpg'),
-                fit: BoxFit.fill,
-              ),
-              borderRadius: const BorderRadius.all(Radius.circular(8.0)),
-            ),
-            height: 150,
-            margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                const textStyle(text: 'ROSE'),
-                buttonstyle(
-                  onPressed: () async {
-                    dynamic result =
-                    await Navigator.pushNamed(context, '/rose');
                   },
                 ),
               ],

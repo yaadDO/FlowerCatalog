@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 
 class navbar extends StatelessWidget {
   const navbar({super.key});
@@ -31,6 +32,13 @@ class navbar extends StatelessWidget {
             title: const Text('Settings', style: TextStyle(color: Colors.white),),
             onTap: () async {
               dynamic result = await Navigator.pushNamed(context, '/settings');
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.share, color: Colors.white,),
+            title: const Text('Share', style: TextStyle(color: Colors.white),),
+            onTap: () {
+              Share.share('com.once.flowerguide');
             },
           ),
           ListTile(
